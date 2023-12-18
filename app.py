@@ -9,6 +9,8 @@ Author: Shashikumar KL
 
 from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
+from sqlalchemy import Column, Integer, String, Boolean
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///site.db'
@@ -21,9 +23,9 @@ class Task(db.Model):
 
     Represents a task with a unique identifier, a taskname, and a completion status.
     """
-    id = db.Column(db.Integer, primary_key=True)
-    taskname = db.Column(db.String(20), unique=True, nullable=False)
-    completed = db.Column(db.Boolean, default=False)
+    id = Column(Integer, primary_key=True)
+    taskname = Column(String(200), nullable=False)
+    completed = Column(Boolean, default=False)
 
     def __repr__(self):
         """

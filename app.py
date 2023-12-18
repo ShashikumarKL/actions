@@ -25,6 +25,15 @@ class Task(db.Model):
     taskname = db.Column(db.String(20), unique=True, nullable=False)
     completed = db.Column(db.Boolean, default=False)
 
+    def __repr__(self):
+        """
+        String representation of the Task object.
+
+        Returns:
+            str: A string representation of the Task object.
+        """
+        return f"Task(id={self.id}, description={self.taskname}, completed={self.completed})"
+
 @app.route('/')
 def home():
     """

@@ -5,7 +5,9 @@ Certainly! Here's the content for a single file named `README.md`:
 
 This is a simple Flask app for task management, where users can view a list of tasks, mark tasks as completed, and add new tasks.
 
+![UI](https://github.com/ShashikumarKL/actions/blob/cicd/ss.png)
 
+https://github.com/ShashikumarKL/actions/blob/cicd/ss.png
 
 ## Installation
 
